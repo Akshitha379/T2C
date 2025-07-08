@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manager Dashboard - Trash2Cash</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="managerdb.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <div class="recycle-icon">
+          <i class="fas fa-recycle"></i>
+        </div>
+        <div class="text-content">
+          <h1>T2C</h1>
+          <p>Recycle, Earn, Repeat</p>
+        </div>
+      </div>
+
+      <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="how-it-works.html">How it Works</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="managerdashboard.html" class="dashboard-link">Dashboard</a>
+        <div class="user-info">
+          <span class="username-large">Manager Name</span>
+          <i class="fas fa-user user-icon-large"></i>
+        </div>
+        <a href="index.html" class="logout-link">Logout</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MANAGER DASHBOARD CONTENT -->
+  <main class="dashboard-container">
+    <!-- Header -->
+    <header class="dashboard-header">
+      <h1>Manager Dashboard</h1>
+      <p>Welcome back, <strong>Manager Name</strong>! Monitor and manage waste collection operations.</p>
+    </header>
+
+    <!-- Stats Cards -->
+    <div class="stats-cards">
+      <div class="card">
+        <i class="fas fa-users card-icon"></i>
+        <h2>Total Users</h2>
+        <p>324</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-recycle card-icon"></i>
+        <h2>Waste Collected</h2>
+        <p>2,345 kg</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-truck card-icon"></i>
+        <h2>Completed Pickups</h2>
+        <p>1,231</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-gift card-icon"></i>
+        <h2>Points Rewarded</h2>
+        <p>4,500</p>
+      </div>
+    </div>
+
+    <!-- Filters -->
+    <div class="filters">
+      <i class="fas fa-filter"></i>
+      <select>
+        <option>All Status</option>
+        <option>Pending</option>
+        <option>Approved</option>
+        <option>Completed</option>
+        <option>Rejected</option>
+      </select>
+
+      <input type="date" />
+    </div>
+
+    <!-- Pickup Requests Table -->
+    <section class="table-section">
+      <h3>Pickup Requests</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>User</th>
+            <th>Waste Type</th>
+            <th>Weight</th>
+            <th>Address</th>
+            <th>Schedule</th>
+            <th>Status</th>
+            <th>Points</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>John Doe</td>
+            <td>Plastic</td>
+            <td>10 kg</td>
+            <td>123 Main Street</td>
+            <td>2025-07-10</td>
+            <td><span class="status completed">Completed</span></td>
+            <td class="points">50</td>
+            <td><i class="fas fa-check action-icon approved"></i></td>
+          </tr>
+          <tr>
+            <td>Jane Smith</td>
+            <td>Metal</td>
+            <td>5 kg</td>
+            <td>45 River Road</td>
+            <td>2025-07-12</td>
+            <td><span class="status pending">Pending</span></td>
+            <td class="points">30</td>
+            <td><i class="fas fa-check action-icon"></i></td>
+          </tr>
+          <tr>
+            <td>Sam Wilson</td>
+            <td>Glass</td>
+            <td>8 kg</td>
+            <td>88 Hill Ave</td>
+            <td>2025-07-14</td>
+            <td><span class="status rejected">Rejected</span></td>
+            <td class="points">0</td>
+            <td><i class="fas fa-times action-icon rejected"></i></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="content">
+        <div class="footer-logo">
+          <div class="recycle-icon">
+            <i class="fas fa-recycle"></i>
+          </div>
+          <div class="text-content1">
+            <h1>T2C</h1>
+            <p>Recycle, Earn, Repeat</p>
+          </div>
+        </div>
+        <div class="footer-description">
+          <p>Transforming waste management through innovative reward systems. Join us in creating a cleaner, more sustainable future while earning rewards.</p>
+        </div>
+        <br>
+        <div class="social-media">
+          <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="quick-links">
+        <h3>Quick Links</h3>
+        <br>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="how-it-works.html">How it Works</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms-and-conditions.html">Terms and Conditions</a></li>
+        </ul>
+      </div>
+      <div class="contact-info">
+        <h3>Contact Us</h3>
+        <br>
+        <p><i class="fas fa-envelope"></i> contact-info@gmail.com</p>
+        <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+        <p><i class="fas fa-map-marker-alt"></i> 123 Trash Lane, Recycle City, RC 12345</p>
+      </div>
+      <hr style="width: 100%; border: 0; border-top: 2px solid #444; margin: 32px 0 0 0;">
+      <div class="footer-bottom">
+        <p>&copy; 2025 Trash2Cash. All rights reserved. Building a sustainable future together.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
