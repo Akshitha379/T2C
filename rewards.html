@@ -6,6 +6,7 @@
   <title>Redeem Rewards</title>
   <link rel="stylesheet" href="rewards.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+ 
 </head>
 <body>
   <div class="container">
@@ -30,19 +31,19 @@
     <div class="categories-box">
       <h3 class="category-title">Categories</h3>
       <div class="categories">
-        <div class="category active"><i class="fas fa-gift"></i> All Rewards</div>
-        <div class="category"><i class="fas fa-ticket-alt"></i> Vouchers</div>
-        <div class="category"><i class="fas fa-dollar-sign"></i> Cash</div>
-        <div class="category"><i class="fas fa-box-open"></i> Gifts</div>
+        <a href="#" class="category active" data-category="all"><i class="fas fa-gift"></i> All Rewards</a>
+        <a href="#" class="category" data-category="voucher"><i class="fas fa-ticket-alt"></i> Voucher</a>
+        <a href="#" class="category" data-category="cash"><i class="fas fa-dollar-sign"></i> Cash</a>
+        <a href="#" class="category" data-category="gift"><i class="fas fa-box-open"></i> Gifts</a>
       </div>
     </div>
 
     <!-- Rewards -->
     <div class="rewards-section">
       <!-- Card 1 -->
-      <div class="reward-card">
+      <div class="reward-card card-voucher">
         <div class="card-img">
-          <img src="amazon.jpg" alt="Amazon Voucher">
+          <img src="images/amazon1.jpg" alt="Amazon Voucher">
           <span class="img-label">voucher</span>
         </div>
         <div class="card-content">
@@ -57,9 +58,9 @@
       </div>
 
       <!-- Card 2 -->
-      <div class="reward-card">
+      <div class="reward-card card-cash">
         <div class="card-img">
-          <img src="cash.jpg" alt="Cash">
+          <img src="images/cash.jpg" alt="Cash">
           <span class="img-label">cash</span>
         </div>
         <div class="card-content">
@@ -74,9 +75,9 @@
       </div>
 
       <!-- Card 3 -->
-      <div class="reward-card">
+      <div class="reward-card card-gift">
         <div class="card-img">
-          <img src="Water.jpeg" alt="Gift">
+          <img src="images/water.jpg" alt="Gift">
           <span class="img-label">gift</span>
         </div>
         <div class="card-content">
@@ -91,5 +92,51 @@
       </div>
     </div>
   </div>
+
+  <!-- Popup Overlay -->
+  <div id="popup-overlay" style="display:none;">
+    <div id="popup-message">
+      <span id="popup-text"></span>
+      <button id="popup-ok">OK</button>
+    </div>
+  </div>
+
+  <script>
+document.querySelectorAll('.categories .category').forEach(cat => {
+  cat.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelectorAll('.categories .category').forEach(c => c.classList.remove('active'));
+    this.classList.add('active');
+    const category = this.getAttribute('data-category');
+    document.querySelectorAll('.reward-card').forEach(card => {
+      if (category === 'all') {
+        card.style.display = 'block';
+      } else if (card.classList.contains('card-' + category)) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+});
+
+// Popup logic for redeem buttons
+document.querySelectorAll('.redeem-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    // Get reward name
+    const card = this.closest('.reward-card');
+    const rewardName = card.querySelector('h4').textContent;
+    // Set popup text
+    document.getElementById('popup-text').textContent =
+      `Successfully redeemed (${rewardName})! You will receive instructions via email.`;
+    // Show popup
+    document.getElementById('popup-overlay').style.display = 'flex';
+  });
+});
+
+document.getElementById('popup-ok').onclick = function() {
+  document.getElementById('popup-overlay').style.display = 'none';
+};
+</script>
 </body>
 </html>
