@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Trash2Cash</title>
+    <link rel="stylesheet" href="index.css"> <link rel="stylesheet" href="contact.css"> <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <div class="recycle-icon">
+                    <i class="fas fa-recycle"></i>
+                    </div>
+                <div class="text-content">
+                    <h1>T2C</h1>
+                    <p>Recycle, Earn, Repeat</p>
+                </div>
+            </div>
+            <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="how-it-works.html">How it Works</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <a href="login.html" class="login-link">Login</a>
+                <a href="join-now.html"><button class="join-btn">Join Now</button></a>
+            </div>
+        </div>
+    </header>
+
+    <main class="contact-main-content">
+        <section class="get-in-touch-section">
+            <h2>Get in Touch</h2>
+            <p>Have questions about T2C? Need help with your account? We're here to help! Reach out to us through any of the channels below.</p>
+            <div class="contact-cards">
+                <div class="card email-card">
+                    <div class="icon-circle"><i class="fas fa-envelope"></i></div>
+                    <h3>Email Us</h3>
+                    <p>info@t2c.com</p>
+                    <p class="small-text">Send us an email anytime</p>
+                </div>
+                <div class="card phone-card">
+                    <div class="icon-circle"><i class="fas fa-phone"></i></div>
+                    <h3>Call Us</h3>
+                    <p>+1 (555) 123-4567</p>
+                    <p class="small-text">Mon-Fri 9AM-6PM EST</p>
+                </div>
+                <div class="card location-card">
+                    <div class="icon-circle"><i class="fas fa-map-marker-alt"></i></div>
+                    <h3>Visit Us</h3>
+                    <p>123 Green Street, Eco City, EC 12345</p>
+                    <p class="small-text">Our headquarters</p>
+                </div>
+                <div class="card hours-card">
+                    <div class="icon-circle"><i class="fas fa-clock"></i></div>
+                    <h3>Business Hours</h3>
+                    <p>Mon-Fri 9AM-6PM EST</p>
+                    <p class="small-text">Weekend 10AM-4PM EST</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-details-grid">
+            <div class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+                <p class="sub-heading">Quick answers to common questions</p>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-question-circle"></i> How do I schedule a pickup?
+                    </div>
+                    <div class="faq-answer">
+                        <p>Simply log into your account, click 'Schedule Pickup', fill out the form with your waste details, and choose a convenient time. We'll handle the rest!</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-question-circle"></i> What types of waste do you accept?
+                    </div>
+                    <div class="faq-answer">
+                        <p>We accept plastic bottles, glass containers, aluminum cans, cardboard, paper, and electronics. Check our 'How It Works' page for the complete list and point values.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-question-circle"></i> How are points calculated?
+                    </div>
+                    <div class="faq-answer">
+                        <p>Points are calculated based on the type and weight of recyclable materials. Each material type has a different point value per kilogram, with bonus multipliers for certain items.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-question-circle"></i> When do I receive my points?
+                    </div>
+                    <div class="faq-answer">
+                        <p>Points are credited to your account within 24-48 hours after pickup verification. You'll receive an email notification when points are credited.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="message-form-section">
+                <h2>Send Us a Message</h2>
+                <p class="sub-heading">We'll get back to you within 24 hours</p>
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group-row">
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" name="fullName" placeholder="Your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="emailAddress">Email Address *</label>
+                            <input type="email" id="emailAddress" name="emailAddress" placeholder="your@email.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select a topic</option>
+                            <option value="General Inquiry">General Inquiry</option>
+                            <option value="Pickup Schedule">Pickup Schedule</option>
+                            <option value="Account Help">Account Help</option>
+                            <option value="Rewards/Points">Rewards/Points</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Tell us how we can help you"></textarea>
+                    </div>
+                    <button type="submit" class="send-message-btn"><i class="fas fa-paper-plane"></i> Send Message</button>
+                </form>
+            </div>
+        </section>
+
+               <section class="signup-today-section">
+            <div class="signup-content">
+                <h2>Ready to Get Started?</h2>
+                <p>Join thousands of users already earning rewards through T2C</p>
+                <a href="join-now.html"><button class="sign-up-today-btn">Sign Up Today</button></a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="content">
+                <div class="footer-logo">
+                    <div class="recycle-icon">
+                        <i class="fas fa-recycle"></i>
+                    </div>
+                    <div class="text-content1">
+                    <h1>T2C</h1>
+                    <p>Recycle, Earn, Repeat</p>
+                    </div>
+                </div>
+            <div class="footer-description">
+                <p>Transforming waste management through innovative reward systems. Join us in creating a cleaner, more sustainable future while earning rewards.</p>
+            </div>
+            <br>
+                <div class="social-media">
+                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="quick-links">
+                <h3>Quick Links</h3>
+                <br>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="how-it-works.html">How it Works</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                     <li><a href="#">Privacy Policy</a></li>
+                      <li><a href="#">Terms and Conditions</a></li>
+                </ul>
+            </div>
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <br>
+                <p><i class="fas fa-envelope"></i> contact-info@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Trash Lane, Recycle City, RC 12345</p>
+            </div>
+
+            <hr style="width:100%; border: 0; border-top: 2px solid #444; margin: 32px 0 0 0;"> <div class="footer-bottom">                
+            <p>&copy; 2025 Trash2Cash. All rights reserved.Building a sustainable future together.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent actual form submission
+
+            // Basic validation (optional, but good practice)
+            const fullName = document.getElementById('fullName').value;
+            const emailAddress = document.getElementById('emailAddress').value;
+            const subject = document.getElementById('subject').value;
+
+            if (fullName === "" || emailAddress === "" || subject === "") {
+                alert("Please fill in all required fields.");
+                return;
+            }
+
+            // Simulate sending message
+            alert("Message Sent Successfully! We will get back to you soon.");
+
+            // Optionally, clear the form after sending
+            this.reset();
+        });
+    </script>
+</body>
+</html>
